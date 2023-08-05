@@ -17,14 +17,18 @@ class RingBounce : public effects::Effect
 	int m_PulseSpeed;
 	int m_NumLeds;	
   neoPixel *m_pixels;
-  
+  int m_Step;
+	void DrawRise();
+	void DrawFade();
+	void DrawWait();
 public:
   RingBounce(int LedsCount, neoPixel * NeoPixel){  
     m_pixels = NeoPixel;
     m_NumLeds = LedsCount; 
-		value = 0;
+		value = 100;
     fadeColor.setColor(LED_COLOR);
     fadeColor.blend(&black, 0);
+		m_Step = 0;// STEP _RISE
   }
 	void Setup(int Speed);
   void SetAllLeds();

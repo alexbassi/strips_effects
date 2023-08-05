@@ -1,6 +1,6 @@
 #include "async_strips.h"
 
-unsigned char brightness_values[PULSE_STEPS] = {7,15,60,100,60,15,7,3};
+unsigned char brightness_values[PULSE_STEPS] = {3,10,20,35,30,15,5,0};
 
 namespace strips
 {
@@ -107,7 +107,7 @@ void MainStripClass::Setup(colorObj *ledColor)
 		this->addToEnd(listObj);
 			
 	}
-	m_mainStripe->setBrightness(255);
+	//m_mainStripe->setBrightness(GLOBAL_BRIGHTNESS);
 	m_mainStripe->clear();
 	m_mainStripe->show();
 }
