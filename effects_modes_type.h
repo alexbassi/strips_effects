@@ -4,7 +4,8 @@
 typedef enum _EffectsModes {
 	ASYNC_STRIPS,
 	BOUNCE,
-	WAVES
+	WAVES,
+	GLITTERS
 } EnumEffectsModes;
 
 #endif
